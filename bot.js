@@ -31,7 +31,7 @@ const w = ['./w1.png'];
                         ctx.fontSize = '20px';
                         ctx.fillStyle = "#f1f1f1";
                         ctx.textAlign = "center";
-                        ctx.fillText(`Welcome To Our Server`, 300, 130);
+                        ctx.fillText(`Welcome TO 3RBE.GQ`, 300, 130);
                        
                         ctx.font = "bold 12px Arial";
                         ctx.fontSize = '20px';
@@ -70,7 +70,7 @@ function forEachObject(obj, func) {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.get("487268383864389663");
+        guild = client.guilds.get("406926224875847720");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -82,7 +82,7 @@ client.on("ready", () => {
  
  
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("487268383864389665");
+    let channel = member.guild.channels.get("483528018963333120");
     if (!channel) {
         console.log("!the channel id it's not correct");
         return;
@@ -93,14 +93,14 @@ client.on("guildMemberAdd", (member) => {
     console.log('-');
     var guild;
     while (!guild)
-        guild = client.guilds.get("487268383864389663");
+        guild = client.guilds.get("406926224875847720");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
             if (dat[Inv])
                 if (dat[Inv] < Invite.uses) {
                     setTimeout(function() {
- channel.send(`**تمت دعوتك من قبل** ${Invite.inviter} `) ;
+ channel.send(`**تمت دعوته من قبل** ${Invite.inviter} `) ;
                     },1500);
  }
             dat[Inv] = Invite.uses;
