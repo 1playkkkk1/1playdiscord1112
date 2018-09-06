@@ -100,7 +100,7 @@ client.on("guildMemberAdd", (member) => {
             if (dat[Inv])
                 if (dat[Inv] < Invite.uses) {
                     setTimeout(function() {
- channel.send(`**invited by** ${Invite.inviter} `) ;
+ channel.send(`**تمت دعوتك من قبل** ${Invite.inviter} `) ;
                     },1500);
  }
             dat[Inv] = Invite.uses;
